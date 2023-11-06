@@ -1,0 +1,94 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: #edf0f1;
+    overflow: hidden;
+}
+
+.todo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-top: 90px;
+    margin-bottom: 10px;
+    padding: 0 3vw;
+    background: #edf0f1;
+    overflow-y: auto;
+
+    &__empty {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+    }
+
+    &__help {
+        font-size: 14px;
+        color: #aaa;
+    }
+}
+
+.todo__unchecked {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.todo__checked {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    border-top: 1px solid #aaa;
+}
+
+.todo-item {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+    line-height: 22px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(44, 62, 80, 0.1);
+    margin-bottom: 15px;
+    padding: 15px;
+    word-break: break-word;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__buttons {
+        width: 110px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__button {
+        width: 50px;
+        height: 50px;
+        box-shadow: none;
+        outline: none;
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        &_remove {
+            background: transparent url('../images/trash.svg') no-repeat center / cover;
+        }
+
+        &_complete {
+            background: transparent url('../images/uncheck.svg') no-repeat center / cover;
+        }
+
+        &_completed {
+            background: transparent url('../images/check.svg') no-repeat center / cover;
+        }
+    }
+}
+
+.todo-item:last-of-type {
+    margin-bottom: 0;
+}
